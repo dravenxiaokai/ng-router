@@ -1,4 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app">
+  <a [routerLink]="['/home']">主页</a>
+  <!-- <a [routerLink]="['/stock']" [queryParams]="{id:1}">股票详情</a> -->
+  <a [routerLink]="['/stock',1]">股票详情</a>
+  <input type="button" value="股票详情" (click)="toStockDetail()">
+
+  <a [routerLink]="[{outlets:{primary:'home',aux:'consult'}}]">开始咨询</a>
+  <a [routerLink]="[{outlets:{aux:null}}]">结束咨询</a>
+</div>
+
 <router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>

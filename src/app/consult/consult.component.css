@@ -1,0 +1,7 @@
+.consult{
+  background-color: green;
+  height: 300px;
+  width:30%;
+  float: left;
+  box-sizing: border-box;
+}
